@@ -4,13 +4,16 @@ const Button = ({
   backgroundColor,
   borderColor,
   textColor,
+  fullWidth,
 }) => {
   return (
     <button
-      className={`flex justify-center items-center gap-2 rounded-full px-7 py-4 border font-montserrat text-lg leading-none    ${
+      className={`flex justify-center items-center gap-2 rounded-full px-7 py-4 border font-montserrat text-lg leading-none ${
+        fullWidth && "w-full"
+      } ${
         backgroundColor
           ? `${backgroundColor}${borderColor}${textColor}`
-          : "border-coral-red text-white bg-coral-red "
+          : "border-coral-red text-white bg-coral-red  "
       }`}
     >
       {label}
